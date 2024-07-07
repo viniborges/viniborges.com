@@ -1,0 +1,81 @@
+// | -------------------------------------------------------------
+// | Container
+// | -------------------------------------------------------------
+@use 'breakpoint' as *;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600');
+
+.container {
+  margin: 0 auto;
+  padding: 0 calc(2rem / 2);
+  max-width: 100%;
+
+  @include breakpoint(medium) {
+    padding: 0 2rem;
+  }
+
+  @include breakpoint(large) {
+    padding: 0 calc(2rem / 2);
+    max-width: 1200px;
+  }
+
+  &.stretch {
+    max-width: 100%;
+  }
+}
+
+.container-logo {
+  display: flex;
+  font-family: 'Montserrat';
+}
+
+.vini {
+  color: var(--neutral-100);
+  background-color: var(--primary-500);
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.borges {
+  color: var(--primary-500);
+  padding: 3px;
+}
+
+.darkmode {
+  .cursor {
+    font-weight: bold;
+    padding: 2px 0;
+    animation: blink-dark 1s step-end infinite;
+  }
+}
+
+.cursor {
+  font-weight: bold;
+  padding: 2px 0;
+  animation: blink 1s step-end infinite;
+}
+
+.img-avatar {
+  img {
+    max-width: 80%;
+  }
+}
+
+@keyframes blink-dark {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: var(--neutral-100);
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: var(--dark-100);
+  }
+}
