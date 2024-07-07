@@ -6,7 +6,8 @@ import icon from 'astro-icon'
 
 // https://astro.build/config
 export default defineConfig({
-  compressHTML: false,
+  site: 'https://viniborges.com',
+  compressHTML: true,
   integrations: [
     mdx(),
     icon(),
