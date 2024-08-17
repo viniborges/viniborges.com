@@ -60,6 +60,19 @@
   }
 }
 
+.badget-list {
+  margin-top: 1.5rem;
+  li {
+    display: inline-block;
+    margin-right: 4px;
+
+    a img {
+      border: 1px var(--neutral-100) solid;
+      border-radius: 5px;
+    }
+  }
+}
+
 @keyframes blink-dark {
   from,
   to {
