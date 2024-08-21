@@ -1,0 +1,17 @@
+---
+import { Icon } from 'astro-icon/components'
+const { position, company, period, description } = Astro.props
+---
+
+<div class="mb-2 pt-6">
+  <div class="flex items-center">
+    <h3 class="w-full text-lg font-semibold uppercase">{position}</h3>
+  </div>
+  <div class="flex justify-between text-sm text-gray-400">
+    <span>{company}</span>
+    <span>{period}</span>
+  </div>
+</div>
+<ul class="list-inside list-disc space-y-1 text-sm">
+  {description.split(';').map((item) => <li>{item}</li>)}
+</ul>
