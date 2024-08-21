@@ -1,0 +1,53 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import ResumeItem from '../components/ResumeItem.astro'
+import { Icon } from 'astro-icon/components'
+---
+
+<DefaultLayout title="Resume">
+  <div class="container">
+    <h3 class="mb-4 flex items-center gap-6 border-b border-gray-600 pb-2">
+      WORK EXPERIENCE
+      <span><a href="/resume.pdf" target="_blank"><Icon name="mdi:file-pdf-box" /></a></span>
+    </h3>
+    <ResumeItem
+      position="Sr. Backend Developer"
+      company="Golfleet Tecnologia"
+      period="Jun 2019 - Present"
+      description=`Contribution in the development and support of the company's SaaS and microservices and integration solutions;
+      Development of RESTful APIs with .NET Core and C#;
+      Development of user interfaces with AngularJS, HTML5, CSS3, and JavaScript;
+      Data management with SQL Server and MongoDB;
+      Messaging queues with RabbitMQ;Redis for data caching;
+      Containerization and orchestration with Docker and Kubernetes;
+      Application performance monitoring with Elastic APM`
+    />
+    <ResumeItem
+      position="Systems Analyst"
+      company="Tata Consultancy Services"
+      period="Jun 2018 - Jun 2019"
+      description=`Development of demands in the Itaú Unibanco project using .Net MVC, SQL Server, HTML5, CSS3, Javascript, JQuery;
+      Test coverage using NUnit;
+      Applying agile methodologies with Scrum to ensure continuous and incremental deliveries`
+    />
+    <ResumeItem
+      position="Systems Developer Analyst"
+      company="Atos"
+      period="Feb 2015 - Jun 2018"
+      description=`Working on the Volkswagen project, following the ITIL methodology to guarantee stability and new functionalities for the systems;
+      Development in Classic ASP, VB6 and C# with WebForms and MVC on .Net, along with HTML, CSS, JavaScript and JQuery, using SQL Server, Oracle and DB2 databases`
+    />
+    <ResumeItem
+      position="Software Developer"
+      company="Gelt Tecnologia e Sistemas"
+      period="Jan 2014 - Feb 2015"
+      description=`Participation in the development of an ERP business management system using the C# language in ASP.NET, HTML 5, JavaScript, CSS3 and SQL Server database`
+    />
+    <ResumeItem
+      position="Jr. Software Developer"
+      company="ExataID"
+      period="Feb 2010 - Dec 2013"
+      description=`Development of management systems for collecting and processing data for the sugar and alcohol sector, using the Visual Basic 6 language. Development of mobile applications for the PalmOS platform with AppForge lib`
+    />
+  </div>
+</DefaultLayout>
