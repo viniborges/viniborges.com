@@ -6,9 +6,12 @@ import { Icon } from 'astro-icon/components'
 
 <DefaultLayout title="Resume">
   <div class="container">
-    <h3 class="mb-4 flex items-center gap-6 border-b border-gray-600 pb-2">
-      WORK EXPERIENCE
-      <span><a href="/resume.pdf" target="_blank"><Icon name="mdi:file-pdf-box" /></a></span>
+    <div class="flex justify-center">
+      <a href="/resume.pdf" target="_blank">Download PDF</a>
+    </div>
+    <h3 class="mt-6 flex items-center gap-6 border-b border-gray-600 pb-2">
+      <Icon name="mdi:coffee-outline" />WORK EXPERIENCE
+      <!-- <span><a href="/resume.pdf" target="_blank"><Icon name="mdi:file-pdf-box" /></a></span> -->
     </h3>
     <ResumeItem
       position="Sr. Backend Developer"
@@ -49,5 +52,25 @@ import { Icon } from 'astro-icon/components'
       period="Feb 2010 - Dec 2013"
       description=`Development of management systems for collecting and processing data for the sugar and alcohol sector, using the Visual Basic 6 language. Development of mobile applications for the PalmOS platform with AppForge lib`
     />
+    <h3 class="mt-6 flex items-center gap-6 border-b border-gray-600 pb-2">
+      <Icon name="mdi:book-open-outline" />EDUCATION
+    </h3>
+    <ResumeItem
+      position="Bachelor's Degree"
+      company="FATEC - Taquaritinga"
+      period="2007 - 2010"
+      description=`Data Processing`
+    />
+    <ResumeItem
+      position="Associate's degree"
+      company="ETEC Elias Nechar"
+      period="2005 - 2006"
+      description=`Technical Computing`
+    />
+    <h3 class="mt-6 flex items-center gap-6 border-b border-gray-600 pb-2">
+      <Icon name="ion:language-outline" />LANGUAGES
+    </h3>
+    <ResumeItem position="" company="English" period="" description=`Basic to intermediate` />
+    <ResumeItem position="" company="Portuguese" period="" description=`Native` />
   </div>
 </DefaultLayout>
