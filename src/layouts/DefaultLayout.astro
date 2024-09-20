@@ -7,7 +7,7 @@ import Footer from '../components/Footer.astro'
 
 const {
   title = 'Luis Vinicius',
-  description = 'Software developer',
+  description = 'Software developer skilled in .NET/.NET Core with C#, Git, Docker, Kubernetes, Javascript, HTML, CSS.',
   url = 'viniborges.com',
   image = 'social-preview-image.png',
   author = 'Luis Vinicius',
@@ -71,6 +71,7 @@ const {
       body {
         height: 100%;
         overflow-x: hidden;
+        cursor: url(arrowhead-rounded-outline.svg) 12 12, auto;
       }
 
       body {
@@ -83,6 +84,10 @@ const {
         ::selection {
           background-color: var(--primary-500);
           color: var(--neutral-100);
+        }
+
+        a {
+          cursor: url(hand-pointer.svg) 12 12, auto;
         }
 
         main {
