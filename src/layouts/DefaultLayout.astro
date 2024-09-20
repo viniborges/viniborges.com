@@ -9,7 +9,7 @@ const {
   title = 'Luis Vinicius',
   description = 'Software developer',
   url = 'viniborges.com',
-  image = '/social-preview-image.png',
+  image = 'social-preview-image.png',
   author = 'Luis Vinicius',
 } = Astro.props
 ---
@@ -27,6 +27,7 @@ const {
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="theme-color" content="#ffffff" />
 
     <SiteMeta title={title} description={description.substring(0, 100)} url={url} image={image} author={author} />
