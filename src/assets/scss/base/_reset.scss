@@ -87,7 +87,7 @@ button * {
 }
 
 button:hover {
-  cursor: pointer;
+  cursor: url(hand-pointer.svg) 12 12, auto;
 }
 
 embed,
