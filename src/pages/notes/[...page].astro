@@ -1,0 +1,61 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import { Card } from 'accessible-astro-components'
+
+export async function getStaticPaths({ paginate }) {
+  const data = Object.values(await import.meta.glob('./*.md', { eager: true }));
+  return paginate(data, { pageSize: 6 })
+}
+const { page } = Astro.props
+---
+
+<DefaultLayout
+  title="Notes"
+  description="My simple notes to dump some of my learning into words."
+>
+  <section class="my-12">
+    <div class="space-content container">
+      <h1>Notes</h1>
+      <p class="text-2xl">
+        Simple notes to dump some of my learning into words and share with others.
+      </p>
+    </div>
+  </section>
+  <section class="my-12">
+    <div class="container">
+      <!-- <ul>{notes.map(note => <li><a href={note.url}>{note.frontmatter.title}</a></li>)}</ul> -->
+      <ul class="my-3">
+        {
+          // page.data.map((note) => (
+          //   <li>
+          //     <Card
+          //       url={note.url}
+          //       title={note.frontmatter.title}
+          //       footer={'Date: ' + note.frontmatter.pubDate}>
+          //         {note.frontmatter.description}
+          //       </Card>
+          //     {/* <a href={note.url}>{note.frontmatter.title}</a> */}
+          //   </li>
+          // ))
+        }
+      </ul>
+    </div>
+  </section>
+</DefaultLayout>
+
+<style lang="scss">
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+
+    @media (min-width: 550px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+
+    @media (min-width: 950px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
