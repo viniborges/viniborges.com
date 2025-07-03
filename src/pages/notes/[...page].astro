@@ -26,17 +26,17 @@ const { page } = Astro.props
       <!-- <ul>{notes.map(note => <li><a href={note.url}>{note.frontmatter.title}</a></li>)}</ul> -->
       <ul class="my-3">
         {
-          page.data.map((note) => (
-            <li>
-              <Card
-                url={note.url}
-                title={note.frontmatter.title}
-                footer={'Date: ' + note.frontmatter.pubDate}>
-                  {note.frontmatter.description}
-                </Card>
-              {/* <a href={note.url}>{note.frontmatter.title}</a> */}
-            </li>
-          ))
+          // page.data.map((note) => (
+          //   <li>
+          //     <Card
+          //       url={note.url}
+          //       title={note.frontmatter.title}
+          //       footer={'Date: ' + note.frontmatter.pubDate}>
+          //         {note.frontmatter.description}
+          //       </Card>
+          //     {/* <a href={note.url}>{note.frontmatter.title}</a> */}
+          //   </li>
+          // ))
         }
       </ul>
     </div>
